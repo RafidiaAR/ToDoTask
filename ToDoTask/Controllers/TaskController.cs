@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ToDoTask.Repository.Interface;
 
 namespace ToDoTask.Controllers
 {
@@ -10,6 +11,11 @@ namespace ToDoTask.Controllers
     [ApiController]
     public class TaskController : ControllerBase
     {
+        private readonly ITaskRepository _taskRepo;
+        public TaskController(ITaskRepository taskRepo) 
+        {
+            _taskRepo = taskRepo;
+        }
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
@@ -21,6 +27,7 @@ namespace ToDoTask.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
+
             return "value";
         }
 
