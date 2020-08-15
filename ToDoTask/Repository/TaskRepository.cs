@@ -59,6 +59,7 @@ namespace ToDoTask.Repository
         }
         public void UpdateDone(TaskList data)
         {
+            // Update Progress and finished Date base on complete or not that task
             DateTime? nullableDate = null;
             TaskList dataToUpdate = (from a in _context.TaskLists where a.TaskListId == data.TaskListId select a).FirstOrDefault();
             dataToUpdate.IsComplete = data.IsComplete;

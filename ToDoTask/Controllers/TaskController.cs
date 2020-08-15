@@ -20,6 +20,7 @@ namespace ToDoTask.Controllers
         }
 
         [HttpPost]
+        // This API use to Create Task and Task List Date
         public void Create(TaskDto param) 
         {
             try {
@@ -42,6 +43,7 @@ namespace ToDoTask.Controllers
             }
         }
         [HttpPut]
+        // this API use to Update Task and task List Data
         public void Update(TaskDto param)
         {
             try
@@ -72,6 +74,7 @@ namespace ToDoTask.Controllers
         }
 
         [HttpGet]
+        // This API use to Get All Data
         public ActionResult<List<TaskDto>> GetAllTask() 
         {
             try {
@@ -85,6 +88,7 @@ namespace ToDoTask.Controllers
         }
         
         [HttpGet("{id}")]
+        // This API use to get Specific Task By ID
         public ActionResult<TaskDto> GetById(int id)
         {
             try
@@ -99,6 +103,7 @@ namespace ToDoTask.Controllers
         }
 
         [HttpDelete("{id}")]
+        // This API use to delete task and task list by task id
         public void Delete(int id)
         {
             try
