@@ -8,7 +8,7 @@ namespace ToDoTask.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class TaskController : ControllerBase
     {
         // GET api/values
         [HttpGet]
