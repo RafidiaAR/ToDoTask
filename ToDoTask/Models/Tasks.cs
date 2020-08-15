@@ -18,7 +18,7 @@ namespace ToDoTask.Models
         public string Description { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime DueDate { get; set; }
-        public int Progress { get; set; }
+        public double Progress { get; set; }
         public DateTime CreatedDate { get; set;}
         public DateTime? FinishDate { get; set; }
         public ICollection<TaskList> TaskLists { get; set; }
